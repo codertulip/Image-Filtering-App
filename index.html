@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Filtering App - @tulip.coder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="choose-file">
+        <input type="file" id="file" accept="image/*" />
+        <label for="file">Choose an image</label>
+    </div>
+
+    <div class="row">
+        <div class="controls">
+            <div class="control c-brightness">
+                BRIGHTNESS
+                <input type="range" id="brightness" min="0.0" max="2.0" value="0" step="0.01">
+            </div>
+            <div class="control c-blur">
+                BLUR
+                <input type="range" min="0.0" max="10.0" value="0" step="0.01" id="blur">
+            </div>
+            <div class="control c-contrast">
+                CONTRAST
+                <input type="range" id="contrast" min="100" max="1000" value="100" step="1">
+            </div>
+            <div class="control c-hue-rotate">
+                HUE ROTATE
+                <input type="range" id="hue-rotate" min="0" max="360" value="0" step="1">
+            </div>
+            <div class="control c-sepia">
+                SEPIA
+                <input type="range" min="0" max="100" value="0" id="sepia">
+            </div>
+            <div class="control c-greyscale">
+                GREYSCALE
+                <input type="range" id="greyscale" min="0" max="100" value="0" step="1">
+            </div>
+            <div class="control c-invert">
+                INVERT
+                <input type="range" id="invert" min="0" max="100" value="0" step="1">
+            </div>
+            <button id="download">Download</button>
+        </div>
+        <canvas class="canvas init"></canvas>
+    </div>
+    <script src="./main.js"></script>
+</body>
+
+</html>

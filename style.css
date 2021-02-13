@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta&display=swap');
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+body{
+    --Mukta: 'Mukta', sans-serif;
+    background-image: url('./bg.jpg');
+    width: 100%;
+    height: 100vh;
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    font-family: var(--Mukta);
+}
+input[type=file]{
+    display: none;
+}
+label[for=file]{
+    cursor: pointer;
+    padding: 20px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    border-radius: 3px;
+    background: #2980b9;
+    color: white;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+label[for=file]:active{
+    opacity: 0.9;
+}
+.controls{
+    width: 30%;
+    margin-right: 3rem;
+}
+.control{
+    padding: 10px 0px;
+    width: 100%;
+    display: flex;
+    font-size: 18px;
+    align-items: center;
+    justify-content: space-between;
+}
+.controls button{
+    margin-top: 1rem;
+    padding: 10px;
+    background: #2980b9;
+    font-size: 18px;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+}
+.controls button:active{
+    opacity: 0.9;
+}
+input[type=range]{
+    -webkit-appearance: none;
+    height: 8px;
+    background: #2980b9;
+    border-radius: 5px;
+    outline: none;
+}
+input[type=range]::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #2980b9;
+}
+.row{
+    display: flex;
+    padding: 3rem 8%;
+    padding-top: 6rem;
+    justify-content: space-between;
+    height: 100%;
+}
+.row canvas{
+    border-radius: 5px;
+    position: relative;
+    border: 2px solid #2980b9;
+    background: #fff;
+}
+.row canvas.init{
+    width: 300px;
+    height: 500px;
+}
